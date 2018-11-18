@@ -14,8 +14,6 @@
         @yield('logo')
     </div>
 
-    <div class="container">
-        @yield('content')
-    </div>
+    @yield('content')
 </body>
 </html>
