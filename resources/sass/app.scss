@@ -1,0 +1,46 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// General
+body {
+  background: #1e1e1e;
+  color: white;
+}
+
+input {
+  -webkit-border-radius: 0!important;
+  -moz-border-radius: 0!important;
+  border-radius: 0!important;
+}
+
+button {
+  -webkit-border-radius: 0!important;
+  -moz-border-radius: 0!important;
+  border-radius: 0!important;
+}
+
+// Auth form
+div.auth-form {
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 5rem;
+  background: #FAFAFA;
+  padding: 35px 35px;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  color: #000;
+}
+
+div.auth-form input {
+  -webkit-box-shadow: 1px 1px 4px -1px #888888;
+  -moz-box-shadow: 1px 1px 4px -1px #888888;
+  box-shadow: 1px 1px 4px -1px #888888;
+}
