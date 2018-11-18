@@ -10,10 +10,8 @@
     <link rel="stylesheet" href={{ asset('css/app.css') }}>
 </head>
 <body>
-    <div class="container">
-        @yield('logo')
-    </div>
-
+    @yield('logo')
     @yield('content')
+    @yield('scripts')
 </body>
 </html>

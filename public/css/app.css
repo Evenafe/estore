@@ -10494,7 +10494,40 @@ div.auth-form input {
   box-shadow: 1px 1px 4px -1px #888888;
 }
 
-ul.nav {
-  margin-left: 15px !important;
+#logo {
+  color: #fff;
+  text-decoration: none;
+}
+
+div#admin div.sidebar ul.nav {
+  width: 150%;
+}
+
+div#admin div.sidebar ul.nav > li > a {
+  color: white;
+}
+
+div#admin div.content {
+  background: #FAFAFA;
+  color: black !important;
+}
+
+div.admin-container {
+  padding: 1rem;
+}
+
+div#products form {
+  width: 30%;
+}
+
+div#category-list {
+  margin-top: 15px;
+}
+
+div#category-list a {
+  width: 50%;
+  margin: 10px 0;
+  -webkit-box-shadow: 1px 1px 4px -1px #888888;
+  box-shadow: 1px 1px 4px -1px #888888;
 }
 
