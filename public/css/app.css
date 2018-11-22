@@ -10479,6 +10479,14 @@ button {
   border-radius: 0 !important;
 }
 
+a.btn {
+  border-radius: 0 !important;
+}
+
+.hidden {
+  display: none;
+}
+
 div.auth-form {
   width: 40%;
   margin: 0 auto;
@@ -10520,14 +10528,55 @@ div#products form {
   width: 30%;
 }
 
-div#category-list {
+div#category label {
+  display: block;
+}
+
+ul#category-list {
   margin-top: 15px;
 }
 
-div#category-list a {
+ul#category-list li {
   width: 50%;
   margin: 10px 0;
   -webkit-box-shadow: 1px 1px 4px -1px #888888;
   box-shadow: 1px 1px 4px -1px #888888;
+}
+
+ul#category-list a {
+  font-size: 1rem;
+}
+
+form#form-product {
+  margin: 1.2rem 0;
+}
+
+div#category input {
+  width: 100%;
+}
+
+div#category h2.ware-title {
+  margin: 1.2rem 0;
+}
+
+div#category a {
+  margin: 1.5rem 0;
+}
+
+h2 span.category-title {
+  font-weight: bold;
+}
+
+i.material-icons.category {
+  float: right;
+  outline: none;
+}
+
+i.material-icons.category:hover {
+  cursor: pointer;
+}
+
+i.material-icons.category.toggle {
+  margin-right: 25px;
 }
 

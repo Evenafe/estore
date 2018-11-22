@@ -17,7 +17,9 @@ class LoginController extends Controller
         $credentials = $store->only(['email', 'password']);
 
         if (Auth::attempt($credentials)) {
-            return redirect()->intended('dashboard');
+            return redirect()->route('dashboard');
         }
+
+        return redirect()->route('register');
     }
 }

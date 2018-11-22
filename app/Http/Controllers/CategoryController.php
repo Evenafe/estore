@@ -14,11 +14,9 @@ class CategoryController extends Controller
         return view('admin.wares.categories.index', compact('categories'));
     }
 
-    public function store(Store $store)
+    public function store(Store $request)
     {
-        $category = new Category();
-        $category->name = $store->name;
-        $category->save();
+        Category::create($request->all());
 
         return back();
     }
@@ -26,7 +24,23 @@ class CategoryController extends Controller
     public function show($id)
     {
         $category = Category::find($id);
+        $products = $category->products;
 
-        return view('admin.wares.categories.category.index', compact('category'));
+        return view('admin.wares.categories.category.index', compact('category', 'products'));
+    }
+
+    public function update($id)
+    {
+        $category = Category::findOrFail($id);
+        $category->update(['active' => $category->active ? 0 : 1]);
+
+        return response()->json($category->active);
+    }
+
+    public function destroy($id)
+    {
+        Category::destroy($id);
+
+        return response()->json('Deleted');
     }
 }

@@ -21,15 +21,21 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         })->name('orders');
     });
 
-    /* Products / categories */
+    /* Wares */
     Route::group(['prefix' => 'wares'], function () {
+
+        /* Categories */
         Route::resource('categories', 'CategoryController')
-            ->only(['index', 'store', 'show'])
+            ->only(['index', 'store', 'show', 'update', 'destroy'])
             ->names(['index' => 'categories']);
 
+        /* Products */
         Route::get('/products', function () {
             return view('admin.wares.products.index');
         })->name('products');
+
+        Route::resource('products', 'ProductController')
+            ->only(['store']);
     });
 
     /* Design */
