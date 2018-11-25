@@ -6,24 +6,29 @@
 
     <div class="form-group">
         <label>Title:</label>
-        <input name="name" type="text" class="form-control" placeholder="Product name">
+        <input required name="name" type="text" class="form-control" placeholder="Product name">
     </div>
 
     <div class="form-group">
         <label>Ingress:</label>
-        <textarea name="ingress" placeholder="Short description" class="form-control" rows="2"></textarea>
+        <textarea required name="ingress" placeholder="Short description" class="form-control" rows="2"></textarea>
     </div>
 
     <div class="form-group">
         <label>Description:</label>
-        <textarea name="description" placeholder="Descriptive information about the product" class="form-control" rows="5"></textarea>
+        <textarea required name="description" placeholder="Descriptive information about the product" class="form-control" rows="5"></textarea>
+    </div>
+
+    <div class="form-group">
+        <label>Product image</label>
+        <input name="image" type="file" class="form-control-file">
     </div>
 
     <h2>Price</h2>
 
     <div class="form-group">
         <label>Price incl. VAT:</label>
-        <input value="0" name="price" min="0" type="number" placeholder="0,00">
+        <input value="0" class="form-control" name="price" min="0" type="number" placeholder="0,00">
     </div>
 
     <div class="form-group">
@@ -39,7 +44,7 @@
 
     <div class="form-group">
         <label>Stock:</label>
-        <input value="0" name="stock" min="0" type="number" placeholder="0">
+        <input value="0" class="form-control" name="stock" min="0" type="number" placeholder="0">
     </div>
 
 

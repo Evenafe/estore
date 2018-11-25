@@ -7,16 +7,16 @@
         <hr>
         <button id="product-button" class="btn btn-primary" role="button" aria-pressed="true">Create new product</button>
 
+        @if($errors->any())
+            @include('layouts.errors')
+        @endif
+
         <div id="create-product-form" class="hidden">
             @include('admin.wares.products.store')
         </div>
 
         <h2 class="ware-title">Products</h2>
         <hr>
-        <ul>
-            @foreach ($products as $product)
-                <li>{{ $product->name }}</li>
-            @endforeach
-        </ul>
+        @include('admin.wares.categories.category.list', compact('products'))
     </div>
 @endsection

@@ -7,9 +7,12 @@
         @include('admin.partials.logo')
 
         <div class="row">
-            @include('admin.partials.nav')
+            <div class="col-md-2 sidebar sidebar-left">
+                @include('admin.partials.nav')
+            </div>
 
-            <div class="col-md-10 col-md-offset-3 content">
+
+            <div class="col-md-9 col-md-offset-3 content">
                 @yield('admin-content')
             </div>
 

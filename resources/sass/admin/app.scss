@@ -1,0 +1,84 @@
+
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import '../variables';
+
+// Bootstrap
+@import '../../../node_modules/bootstrap/scss/bootstrap';
+
+// Other scss-files for the estore
+@import 'wares';
+@import 'auth';
+
+// General
+
+i {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+body {
+  background: #1e1e1e;
+  color: white;
+}
+
+input {
+  -webkit-border-radius: 0!important;
+  -moz-border-radius: 0!important;
+  border-radius: 0!important;
+}
+
+button {
+  -webkit-border-radius: 0!important;
+  -moz-border-radius: 0!important;
+  border-radius: 0!important;
+}
+
+a.btn {
+  -webkit-border-radius: 0!important;
+  -moz-border-radius: 0!important;
+  border-radius: 0!important;
+}
+
+.hidden {
+  display: none;
+}
+
+
+
+// Admin
+
+div#admin form {
+  width: 50%;
+}
+
+// Logo
+#logo {
+  color: #fff;
+  text-decoration: none;
+}
+
+// Nav
+div#admin div.sidebar ul.nav {
+  width: 150%;
+}
+
+div#admin div.sidebar ul.nav > li > a {
+  color: white;
+}
+
+// Content
+div#admin div.content {
+  background: #FAFAFA;
+  color: black!important;
+}
+
+div.admin-container {
+  padding: 1rem;
+}

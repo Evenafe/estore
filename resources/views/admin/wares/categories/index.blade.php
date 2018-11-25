@@ -6,4 +6,5 @@
     @include('admin.wares.categories.store')
 
     @include('admin.wares.categories.list', compact('categories', 'products'))
+
 @endsection

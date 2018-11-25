@@ -1,15 +1,15 @@
-const URL = '/admin/wares/categories';
+const URL = '/admin/wares/' + $('meta[name=ware]').attr('content');
 const csrfToken = $('meta[name=csrf-token]').attr('content');
 
-// Toggle category status
 $(function() {
-    $('i.material-icons.category.toggle').click(function(event) {
+    // Toggle status
+    $('i.material-icons.toggle').click(function(event) {
         const icon = this;
         const id = $(event.target).parent().attr('id');
 
         $.ajax({
             url: `${URL}/${id}`,
-            method: 'PATCH',
+            method: 'PUT',
             headers: {
                 'X-CSRF-TOKEN': csrfToken
             },
@@ -19,8 +19,8 @@ $(function() {
         });
     });
 
-    // Delete category
-    $('i.material-icons.category.delete').click(function(event) {
+    // Delete
+    $('i.material-icons.delete').click(function(event) {
         const id = $(event.target).parent().attr('id');
 
         $.ajax({
@@ -38,6 +38,11 @@ $(function() {
     // Make product form appear
     $('div#category button#product-button').click(function() {
         $('div#create-product-form').toggle('300');
+    });
+
+    // Make category edit name appear
+    $('ul#category-list i.edit').click(function() {
+        $(this).siblings('form').toggle('300');
     });
 });
 

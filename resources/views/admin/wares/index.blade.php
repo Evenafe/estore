@@ -1,7 +1,7 @@
 @extends('admin.partials.app')
 
 @section('admin-content')
-    <div class="admin-container" id="products">
+    <div class="admin-container" id="wares">
         <ul class="nav nav-tabs">
             <li class="nav-item">
                 <a class="nav-link active" href="{{ route('categories') }}">Categories</a>
@@ -13,4 +13,5 @@
 
         @yield('wares-content')
     </div>
+    <script src="{{ asset('js/admin/wares.js') }}"></script>
 @endsection

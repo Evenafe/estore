@@ -7,28 +7,28 @@
 @endsection
 
 @section('content')
-    <div class="container auth-form" id="register">
+    <div class="container center-block auth-form" id="register">
         <form method="POST" action={{ route('register.store') }}>
             @csrf
             <div class="form-group">
                 <label for="exampleInputEmail1">Name</label>
-                <input name="name" type="text" class="form-control" aria-describedby="nameHelp" placeholder="Your name">
+                <input required name="name" type="text" class="form-control" aria-describedby="nameHelp" placeholder="Your name">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputEmail1">Email address</label>
-                <input name="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
+                <input required name="email" type="email" class="form-control" aria-describedby="emailHelp" placeholder="Enter email">
                 <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
             </div>
 
             <div class="form-group">
                 <label for="exampleInputPassword1">Password</label>
-                <input name="password" type="password" class="form-control" placeholder="Password">
+                <input required name="password" type="password" class="form-control" placeholder="Password">
             </div>
 
             <div class="form-group">
                 <label for="exampleInputPassword1">Re-type password</label>
-                <input name="password_confirmation" type="password" class="form-control" placeholder="Password">
+                <input required name="password_confirmation" type="password" class="form-control" placeholder="Password">
             </div>
             <button type="submit" class="btn-lg btn btn-primary">Register</button>
         </form>

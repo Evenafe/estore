@@ -15,7 +15,8 @@ class Product extends Model
         'price',
         'ingress',
         'description',
-        'tax_rate'
+        'tax_rate',
+        'active'
     ];
 
     public function category()

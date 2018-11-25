@@ -1,0 +1,59 @@
+ul.wares-list li {
+  width: 50%;
+  margin: .4rem 0;
+  -webkit-box-shadow: 1px 1px 4px -1px #888888;
+  -moz-box-shadow: 1px 1px 4px -1px #888888;
+  box-shadow: 1px 1px 4px -1px #888888;
+  padding: .5rem;
+}
+
+// Categories
+
+div#category label {
+  display: block;
+}
+
+ul#category-list {
+  margin-top: 1.1rem;
+}
+
+ul#category-list a {
+  font-size: 1rem;
+}
+
+form#form-product {
+  margin: 1.2rem 0;
+}
+
+div#category input {
+  width: 100%;
+}
+
+div#category h2.ware-title {
+  margin-top: 1.2rem;
+}
+
+div#category a {
+  margin: 1.5rem 0;
+}
+
+h2 span.category-title {
+  font-weight: bold;
+}
+
+// Products
+
+ul#product-list {
+  margin-top: 1.1rem;
+}
+
+// Icons
+
+i.material-icons.toggle, i.material-icons.delete, i.material-icons.edit {
+  float: right;
+  padding-left: .7rem;
+}
+
+i.material-icons.toggle:hover, i.material-icons.delete:hover, i.material-icons.edit {
+  cursor: pointer;
+}

@@ -1,9 +1,9 @@
 <?php
 
 /* Storefront */
-Route::get('/', function () {
-    return view('storefront.index');
-})->name('storefront');
+Route::view('/{path?}', 'storefront.index')
+    ->where('path', '.*')
+    ->name('react');
 
 /* Admin */
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
@@ -35,7 +35,7 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
         })->name('products');
 
         Route::resource('products', 'ProductController')
-            ->only(['store']);
+            ->only(['store', 'edit', 'destroy', 'update']);
     });
 
     /* Design */

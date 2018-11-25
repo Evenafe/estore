@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Category;
 use App\Http\Requests\Admin\Wares\Category\Store;
+use Illuminate\Http\Request;
 
 class CategoryController extends Controller
 {
@@ -29,18 +30,27 @@ class CategoryController extends Controller
         return view('admin.wares.categories.category.index', compact('category', 'products'));
     }
 
-    public function update($id)
+    public function update(Request $request, $id)
     {
         $category = Category::findOrFail($id);
-        $category->update(['active' => $category->active ? 0 : 1]);
 
-        return response()->json($category->active);
+        if ($request->isMethod('PATCH')) {
+            $category->update(['name' => $request->name]);
+
+            return back();
+        } else {
+            $category->update(['active' => $category->active ? 0 : 1]);
+
+            return response()->json($category->active);
+        }
     }
 
     public function destroy($id)
     {
-        Category::destroy($id);
+        $category = Category::find($id);
+        $category->products()->delete();
+        $category->delete();
 
-        return response()->json('Deleted');
+        return response()->json('Category deleted');
     }
 }
