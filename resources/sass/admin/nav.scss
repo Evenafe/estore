@@ -1,0 +1,61 @@
+div#admin div.sidebar ul.nav > li > a {
+  color: white;
+}
+
+div#admin li.nav-toggle > span {
+  cursor: pointer;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+div#admin li.nav-toggle a {
+  color: white;
+}
+
+li.nav-toggle ul {
+  list-style: none;
+}
+
+ul.nav i.add {
+  position: absolute;
+  transition: 0.2s;
+  font-size: 16px;
+  line-height: inherit;
+  padding: 0 .5rem;
+}
+
+ul.nav i.type {
+  float: left;
+  font-size: 1.35rem;
+  padding-right: .5rem;
+}
+
+ul.nav {
+  margin-top: .8rem;
+  width: 100%;
+}
+
+.rotate-element {
+  transform: rotate(45deg);
+}
+
+.nav-link {
+  font-size: 1rem;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  border-radius: 30px;
+  width: 100%;
+}
+
+.nav-link:hover {
+  cursor: pointer;
+  background-color: #ED553B;
+}
+
+.nav-link:active {
+  background: #8b432b;
+}

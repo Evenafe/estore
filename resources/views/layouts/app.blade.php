@@ -22,5 +22,6 @@
     </div>
 
     @yield('content')
+    <script src="{{ asset('js/admin/app.js') }}"></script>
 </body>
 </html>

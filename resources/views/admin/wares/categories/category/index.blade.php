@@ -5,7 +5,7 @@
         <a href="{{ route('categories') }}">Back</a>
         <h2 class="ware-title">Category: <span class="category-title">{{ $category->name }}</span></h2>
         <hr>
-        <button id="product-button" class="btn btn-primary" role="button" aria-pressed="true">Create new product</button>
+        <button id="product-button" class="btn btn-success" role="button" aria-pressed="true">Create new product</button>
 
         @if($errors->any())
             @include('layouts.errors')

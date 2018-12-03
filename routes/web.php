@@ -1,10 +1,5 @@
 <?php
 
-/* Storefront */
-Route::view('/{path?}', 'storefront.index')
-    ->where('path', '.*')
-    ->name('react');
-
 /* Admin */
 Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
     Route::redirect('/', 'admin/dashboard', 301);
@@ -30,19 +25,19 @@ Route::group(['prefix' => 'admin', 'middleware' => 'auth'], function () {
             ->names(['index' => 'categories']);
 
         /* Products */
-        Route::get('/products', function () {
-            return view('admin.wares.products.index');
-        })->name('products');
-
         Route::resource('products', 'ProductController')
-            ->only(['store', 'edit', 'destroy', 'update']);
+            ->only(['store', 'edit', 'destroy', 'update', 'index', 'show'])
+            ->names(['index' => 'products']);
     });
 
     /* Design */
     Route::group(['prefix' => 'design'], function () {
-        Route::get('/', function () {
-            return view('admin.design.index');
-        })->name('design');
+        Route::resource('slider', 'SliderController')
+            ->only(['index', 'store', 'show', 'update', 'destroy'])
+            ->names(['index' => 'slider']);
+
+        Route::resource('sliderImages', 'SliderImagesController')
+            ->only(['store']);
     });
 
     /* Settings */
@@ -67,3 +62,8 @@ Route::group(['prefix' => 'auth', 'middleware' => 'guest'], function () {
         ->only(['index', 'store'])
         ->names(['index' => 'register']);
 });
+
+/* Storefront */
+Route::view('/{path?}', 'storefront.index')
+    ->where('path', '.*')
+    ->name('react');

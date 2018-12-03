@@ -1,4 +1,4 @@
-<form id="form-product" method="POST" action="{{ route('products.store') }}">
+<form enctype="multipart/form-data" id="form-product" method="POST" action="{{ route('products.store') }}">
     @csrf
     <input type="hidden" name="category_id" value="{{ $category->id }}">
 
@@ -21,14 +21,14 @@
 
     <div class="form-group">
         <label>Product image</label>
-        <input name="image" type="file" class="form-control-file">
+        <input id="image" name="image" type="file" class="form-control-file">
     </div>
 
     <h2>Price</h2>
 
     <div class="form-group">
         <label>Price incl. VAT:</label>
-        <input value="0" class="form-control" name="price" min="0" type="number" placeholder="0,00">
+        <input class="form-control" name="price" min="0" type="number" placeholder="0.00">
     </div>
 
     <div class="form-group">

@@ -2,6 +2,6 @@
 
 @section('admin-content')
     <div class="admin-container">
-        <h1>Design</h1>
+        @yield('design-content')
     </div>
 @endsection
